@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,69 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MiniPoker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QO1-H5-0Sc">
+                                <rect key="frame" x="54" y="121" width="307" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="aXF-Jj-OAq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reversoBaraja" translatesAutoresizingMaskIntoConstraints="NO" id="F8J-Fu-YRM">
+                                <rect key="frame" x="35" y="509" width="151" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="7gB-7i-mRa"/>
+                                    <constraint firstAttribute="height" constant="191" id="Pg1-Ov-BWe"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reversoBaraja" translatesAutoresizingMaskIntoConstraints="NO" id="huF-ad-Uta">
+                                <rect key="frame" x="232" y="509" width="151" height="191"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILL-4v-LkH">
+                                <rect key="frame" x="155" y="780" width="104" height="45"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="87c-sw-aam"/>
+                                </constraints>
+                                <state key="normal" title="Jugar"/>
+                                <connections>
+                                    <action selector="btnPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUK-LA-gCQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QO1-H5-0Sc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="AFh-n1-dX5"/>
+                            <constraint firstItem="F8J-Fu-YRM" firstAttribute="bottom" secondItem="huF-ad-Uta" secondAttribute="bottom" id="Agz-fb-prV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="huF-ad-Uta" secondAttribute="trailing" constant="31" id="GT2-cy-JaH"/>
+                            <constraint firstItem="ILL-4v-LkH" firstAttribute="top" secondItem="huF-ad-Uta" secondAttribute="bottom" constant="80" id="IdE-6Y-M1S"/>
+                            <constraint firstItem="QO1-H5-0Sc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="WNE-mT-Zta"/>
+                            <constraint firstItem="QO1-H5-0Sc" firstAttribute="centerX" secondItem="ILL-4v-LkH" secondAttribute="centerX" id="XXM-bo-fqD"/>
+                            <constraint firstItem="F8J-Fu-YRM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="dZq-5t-GlT"/>
+                            <constraint firstItem="F8J-Fu-YRM" firstAttribute="top" secondItem="huF-ad-Uta" secondAttribute="top" id="dju-UY-fSQ"/>
+                            <constraint firstItem="ILL-4v-LkH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="dk1-ZC-rpU"/>
+                            <constraint firstItem="huF-ad-Uta" firstAttribute="leading" secondItem="F8J-Fu-YRM" secondAttribute="trailing" constant="46" id="h3Y-x7-95B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ILL-4v-LkH" secondAttribute="bottom" constant="37" id="yvm-aS-aXD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QO1-H5-0Sc" secondAttribute="trailing" constant="53" id="zpH-be-Ose"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imgLogo" destination="QO1-H5-0Sc" id="ie0-4k-LJJ"/>
+                        <outlet property="imgOne" destination="F8J-Fu-YRM" id="DIP-69-ZEg"/>
+                        <outlet property="imgTwo" destination="huF-ad-Uta" id="PNd-PB-ndw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="920" height="679"/>
+        <image name="reversoBaraja" width="703" height="1102"/>
+    </resources>
 </document>

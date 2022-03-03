@@ -10,10 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var imgLogo: UIImageView!
+    
+    @IBOutlet weak var imgOne: UIImageView!
+    
+    
+    @IBOutlet weak var imgTwo: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.backgroundColor=UIColor(patternImage: UIImage(named: "fondo")!)
+        
     }
+    
+    
+    @IBAction func btnPlay(_ sender: UIButton) {
+        
+        
+    }
+    
 
 
 }
